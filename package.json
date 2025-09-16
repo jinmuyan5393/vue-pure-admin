@@ -1,14 +1,11 @@
 {
   "name": "vue-pure-admin",
-  "version": "6.1.1",
+  "version": "6.1.2",
   "private": true,
   "type": "module",
   "scripts": {
     "dev": "NODE_OPTIONS=--max-old-space-size=4096 vite",
-    "serve": "pnpm dev",
     "build": "rimraf dist && NODE_OPTIONS=--max-old-space-size=8192 vite build && generate-version-file",
-    "build:staging": "rimraf dist && vite build --mode staging",
-    "report": "rimraf dist && vite build",
     "preview": "vite preview",
     "preview:build": "pnpm build && vite preview",
     "typecheck": "tsc --noEmit && vue-tsc --noEmit --skipLibCheck",
@@ -18,16 +15,13 @@
     "lint:prettier": "prettier --write  \"src/**/*.{js,ts,json,tsx,css,scss,vue,html,md}\"",
     "lint:stylelint": "stylelint --cache --fix \"**/*.{html,vue,css,scss}\" --cache-location node_modules/.cache/stylelint/",
     "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:stylelint",
-    "prepare": "husky",
     "preinstall": "npx only-allow pnpm",
-    "gv": "generate-version-file",
-    "gv:new": "cross-env VERSION=1.1.0-beta generate-version-file"
+    "gv": "generate-version-file"
   },
   "keywords": [
-    "vue-pure-admin",
     "element-plus",
     "tailwindcss",
-    "pure-admin",
+    "admin",
     "typescript",
     "pinia",
     "vue3",
@@ -44,9 +38,9 @@
   },
   "license": "MIT",
   "author": {
-    "name": "xiaoxian521",
-    "email": "pureadmin@163.com",
-    "url": "https://github.com/xiaoxian521"
+    "name": "lucas",
+    "email": "lucas@163.com",
+    "url": "https://github.com/lucas"
   },
   "dependencies": {
     "@amap/amap-jsapi-loader": "^1.0.1",
