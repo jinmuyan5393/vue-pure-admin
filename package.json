@@ -20,7 +20,8 @@
     "lint": "pnpm lint:eslint && pnpm lint:prettier && pnpm lint:stylelint",
     "prepare": "husky",
     "preinstall": "npx only-allow pnpm",
-    "gv": "generate-version-file"
+    "gv": "generate-version-file",
+    "gv:new": "cross-env VERSION=1.1.0-beta generate-version-file"
   },
   "keywords": [
     "vue-pure-admin",
@@ -138,6 +139,7 @@
     "@vitejs/plugin-vue-jsx": "^5.1.1",
     "boxen": "^8.0.1",
     "code-inspector-plugin": "^1.2.8",
+    "cross-env": "^10.0.0",
     "cssnano": "^7.1.1",
     "dagre": "^0.8.5",
     "eslint": "^9.35.0",
